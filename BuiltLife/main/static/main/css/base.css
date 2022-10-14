@@ -1,0 +1,534 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+a {
+    color: #4B0082;
+    text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+    font-family: Inter, Helvetica, "sans-serif";
+}
+main {
+    padding: 0 30px 30px 30px;
+    background-color: #1b1b29;
+    color: #FFF;
+}
+
+
+/* GET STARTED */
+
+
+/* ========== HEADER BLOCK ========== */
+
+
+
+.main_header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_header_container {
+    width: 100%;
+    height: 100%;
+    background-color: #181c32;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.first_container_main_header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.icon_logo_first_main_header {
+    width: 45px;
+    height: 30px;
+}
+
+.icon_logo_first_main_header a {
+    width: 100%;
+    height: 100%;
+}
+
+.icon_logo_first_main_header img {
+    width: 100%;
+    height: 100%;
+}
+
+.select_activity_first_main_header {
+    margin-left: 30px;
+    border: 1px solid #2e2d42;
+    color: #a1a5b7;
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 12px;
+    border-radius: 5px;
+}
+
+.select_activity_first_main_header:hover {
+    cursor: pointer;
+    background-color: #2e2d42;
+    color: #FFF;
+}
+
+.select_activity_first_main_header:hover svg {
+    fill: #FFF;
+}
+
+.select_activity_first_main_header p {
+    font-size: 13px;
+    font-weight: 500 !important;
+}
+
+.select_activity_first_main_header span {
+    margin-left: 40px;
+}
+
+.add_new_activity_first_main_header {
+    margin-left: 10px;
+    background-color: #2e2d42;
+    padding: 7px;
+    border-radius: 7px;
+}
+
+.add_new_activity_first_main_header:hover {
+    background-color: #009ef7;
+    cursor: pointer;
+}
+
+.add_new_activity_first_main_header:hover span svg {
+    color: #FFF;
+}
+
+.add_new_activity_first_main_header span svg {
+    color: #a1a5b7;
+}
+
+.second_container_main_header {
+    display: flex;
+    align-items: center;
+}
+
+.check_button_second_main_header {
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.check_button_second_main_header:hover {
+    background-color: #2e2d42;
+}
+
+.activity_analysis_button {
+    color: #009ef7;
+}
+
+.activity_notifications_button {
+    color: #f1416c;
+}
+
+.chat_button {
+    color: #50cd89;
+}
+
+.quick_links_button {
+    color: #7239ea;
+}
+
+.profile_page_button {
+    margin: 30px 0;
+    cursor: pointer;
+}
+
+.profile_image_second_main_header {
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 7px;
+}
+
+
+/* ========== END HEADER BLOCK ========== */
+
+
+
+/* ========== SECOND HEADER BLOCK ========== */
+
+
+
+.second_header {
+    padding: 0 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2e2d42;
+}
+
+.first_container_second_header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.first_container_second_header a {
+    padding: 12px;
+    border-radius: 7px;
+    background-color: #2b2a41;
+    color: #a1a5b7;
+    font-size: 14px;
+}
+
+.pages_second_header {
+    margin: 0 5px;
+}
+
+.help_second_header {
+    margin-left: 5px;
+}
+
+.second_container_second_header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    margin: 15px 0;
+}
+
+.quick_search_second_header {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 7px;
+    padding: 10px;
+    border: 1px solid #a1a5b7;
+}
+
+.quick_search_second_header span {
+    margin-right: 10px;
+    color: #FFF;
+}
+
+.quick_search_second_header input {
+    width: 170px;
+    background-color: #2e2d42;
+    border: none;
+}
+
+.quick_search_second_header input:focus {
+    border: none;
+}
+
+.quick_search_second_header input:active {
+    border: none;
+}
+
+.quick_search_second_header input[placeholder] {
+    color: #a1a5b7;
+    font-size: 14px;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+input[type="search" i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-search-cancel-button {
+    opacity: 0;
+    display: none;
+}
+
+
+/* ========== END HEADER BLOCK ========== */
+
+
+
+/* ========== FOLLOW TO ACTIVITIES PAGE ========== */
+
+
+
+.activities_page_follow_container {
+    width: 100%;
+    height: 100%;
+}
+
+.activities_by_status {
+    padding: 30px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.activities_title_by_status {
+    display: flex;
+    align-items: center;
+}
+
+.activities_title_by_status h1 {
+    font-size: 18px;
+    font-weight: 600 !important;
+}
+
+.activities_title_by_status p {
+    font-size: 14px;
+    color: #a1a5b7;
+    margin-left: 10px;
+}
+
+.status_activities_status {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    color: #a1a5b7;
+    background-color: #2b2a41;
+    border-radius: 7px;
+}
+
+.status_activities_status p {
+    font-size: 13px;
+    margin-right: 40px;
+}
+
+.activities_block_main_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.activiti_info_detail_block {
+    width: 30%;
+    background-color: #2b2a41;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px 0 0 30px;
+    color: #FFF;
+}
+
+.activiti_info_detail_block:hover {
+    color: #FFF;
+}
+
+.main_info_activity_detail_block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cover_image_activity {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 7px;
+}
+
+.passing_status_activity {
+    padding: 10px 12px;
+    color: #009ef7;
+    background-color: #212e48;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.main_title_info_activity {
+    padding: 30px 0 20px 0;
+}
+
+.main_title_info_activity h1 {
+    font-size: 18px;
+    font-weight: 600 !important;
+}
+
+.main_title_info_activity p {
+    padding-top: 10px;
+    font-size: 15px;
+    color: #a1a5b7;
+}
+
+.main_passing_detail_activity {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main_started_date_activity {
+    border: 1px solid #a1a5b7;
+    border-style: dashed !important;
+    border-color: #a1a5b7;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.main_started_date_activity h1 {
+    font-size: 15px;
+    color: #a1a5b7;
+}
+
+.main_started_date_activity p {
+    font-size: 14px;
+    color: #5e6778;
+}
+
+.percentage_activity {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+}
+
+.completed_percentage_activity {
+    width: 65%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #009ef7;
+}
+
+.remainder_percentage_activity {
+    width: 35%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #5e6778;
+}
+
+.other_users_passing_activity {
+    display: flex;
+    align-items: center;
+}
+
+.user_passing_activity {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.second_user_passing_activity {
+    position: absolute;
+    margin-left: 35px;
+}
+
+.available_activities_title_blank {
+    margin: 30px 0;
+}
+
+.detail_available_activity {
+    width: 30%;
+    margin: 30px 0 0 30px;
+    padding: 30px;
+    background-color: #2e2d42;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+}
+
+.detail_available_activity:hover {
+    cursor: pointer;
+    color: #FFF;
+}
+
+.definition_available_activity {
+    margin: 10px 0 20px 0;
+}
+
+.main_informations_available_activity {
+    display: flex;
+    align-items: center;
+}
+
+.main_informations_available_activity h1 {
+    margin-left: 20px;
+}
+
+.budget_price_activity {
+    display: flex;
+}
+
+
+
+/* ========== END FOLLOW TO ACTIVITIES PAGE ========== */
+
+
+
+/* ========== CREATE COMPANY PAGE ========== */
+
+
+
+.create_company_background_page {
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #2e2d42;
+}
+
+.create_company_absolute_container {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 9;
+    padding: 30px;
+}
+
+.create_company_absolute_block {
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e2d;
+    border-radius: 15px;
+}
+
+
+
+/* ========== END CREATE COMPANY PAGE ========== */
