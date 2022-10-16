@@ -4,6 +4,384 @@
 
 {% block content %}
 
-    <h1>Create Activity</h1>
+    <div class="create_company_background_page"></div>
+
+    <div class="create_company_absolute_container">
+        <div class="create_company_absolute_block">
+            <div class="crate_company_header_title">
+                <div class="create_company_title_header">
+                    <h1>Create Activity</h1>
+                </div>
+                <a href="{% url 'home' %}" class="close_create_company_header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFF" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="create_company_main_form_table">
+                <div class="title_block_main_form_table">
+                    <span class="detail_title_block_main_form_table" id="company_details">
+                        Activity Type
+                    </span>
+                    <span class="detail_title_block_main_form_table" id="company_information">
+                        Activity Settings
+                    </span>
+                    <span class="detail_title_block_main_form_table" id="company_ceo">
+                        Activity Price
+                    </span>
+                    <span class="detail_title_block_main_form_table" id="form_completed">
+                        Activity
+                    </span>
+                </div>
+                <div class="form_block_main_form_table">
+                    <form method="POST">
+                        {% csrf_token %}
+
+
+                        <div class="form_block_company_details" id="form_block_company_details" style="display: block;">
+                            <div class="setup_company_details">
+                                <h1>Setup Company Details</h1>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#5e6778" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="need_help_page_block">
+                                <p>If you need more info, please check out <a href="">Help Page</a>.</p>
+                            </div>
+                            <div class="company_name_form_block">
+                                <div class="title_company_name_form_block">
+                                    <h1>Company Name</h1>
+                                    <span>*</span>
+                                </div>
+                                <label for="company_name">
+                                    <input type="text" name="company_name" autocomplete="off" id="company_name" oninput="bass()">
+                                </label>
+                                <div class="error_message_form_block">
+                                    <p id="error_message_company_name">Company Name is required</p>
+                                </div>
+                            </div>
+                            <div class="company_logo_form_block">
+                                <div class="title_company_logo_form_block">
+                                    <h1>Company Logo</h1>
+                                    <i style="margin-left: 10px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#5e6778" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div class="image_company_logo_form_block">
+                                    <div class="default_image_image_company_logo" style="background-image: url('https://preview.keenthemes.com/metronic8/demo16/assets/media/svg/files/blank-image-dark.svg')"></div>
+                                    <label class="change_image_company_logo">
+                                        <input type="file" name="company_logo" class="inputTag" id="inputTag company_logo" oninput="bass()">
+                                        <svg id="imageName" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#5e6778" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                                        </svg>
+                                    </label>
+                                </div>
+                                <div class="attention_text_validate_company_logo">
+                                    <p>Allowed file types: png, jpg, jpeg.</p>
+                                </div>
+                            </div>
+
+                            <div class="company_goal_form_table_block">
+                                <div class="title_company_logo_form_block" style="margin-top: 30px;">
+                                    <h1>Company Goal</h1>
+                                    <span>*</span>
+                                </div>
+                                <div class="get_more_visitors_company_goal radio_input_company_goal_block">
+                                    <label>
+                                        <input type="radio" name="goal_role" value="{{ get_more_visitors }}" checked>
+                                    </label>
+                                    <div class="title_get_more_visitors title_radio_input_company_goal">
+                                        <h1>{{ get_more_visitors }}</h1>
+                                        <p>Increase impression traffic onto the platform</p>
+                                    </div>
+                                </div>
+                                <div class="dividing_line_form_table"></div>
+                                <div class="get_more_money_company_goal radio_input_company_goal_block">
+                                    <label>
+                                        <input type="radio" name="goal_role" value="{{ get_more_money }}">
+                                    </label>
+                                    <div class="title_get_more_money title_radio_input_company_goal">
+                                        <h1>{{ get_more_money }}</h1>
+                                        <p>Help us and ourselves earn more</p>
+                                    </div>
+                                </div>
+                                <div class="dividing_line_form_table"></div>
+                                <div class="get_more_messages_company_goal radio_input_company_goal_block">
+                                    <label>
+                                        <input type="radio" name="goal_role" value="{{ get_more_messages }}">
+                                    </label>
+                                    <div class="title_get_more_messages title_radio_input_company_goal">
+                                        <h1>{{ get_more_messages }}</h1>
+                                        <p>Increase community interaction and communication</p>
+                                    </div>
+                                </div>
+                                <div class="dividing_line_form_table"></div>
+                                <div class="get_more_likes_company_goal radio_input_company_goal_block">
+                                    <label>
+                                        <input type="radio" name="goal_role" value="{{ get_more_likes }}">
+                                    </label>
+                                    <div class="title_get_more_likes title_radio_input_company_goal">
+                                        <h1>{{ get_more_likes }}</h1>
+                                        <p>Increase positive interactivity on social media platforms</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="continue_page_to_company_informations">
+                                <div class="continue_page_info" id="continue_to_company_information">
+                                    <h1>Continue</h1>
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form_block_company_address_info" id="form_block_company_address_info" style="display: none;">
+                            <div class="setup_company_details">
+                                <h1>Setup Company Information</h1>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#5e6778" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="need_help_page_block">
+                                <p>If you need more info, please check out <a href="">Help Page</a>.</p>
+                            </div>
+                            <div class="company_name_form_block">
+                                <div class="title_company_name_form_block">
+                                    <h1>Company email address</h1>
+                                    <span>*</span>
+                                </div>
+                                <label>
+                                    <input type="email" name="company_email" autocomplete="off" placeholder="company@builtlife.com" id="company_email" oninput="bass()">
+                                </label>
+                                <div class="error_message_form_block">
+                                    <p id="error_message_company_email">Company Email is required</p>
+                                </div>
+                            </div>
+                            <div class="company_name_form_block">
+                                <div class="title_company_name_form_block">
+                                    <h1>Company phone number</h1>
+                                    <span>*</span>
+                                </div>
+                                <label>
+                                    <input type="number" name="company_phone_number" autocomplete="off" placeholder="+7 (777) 777 77-77" id="company_phone_number">
+                                </label>
+                                <div class="error_message_form_block">
+                                    <p id="error_message_company_phone_number">Company phone number is required</p>
+                                </div>
+                            </div>
+                            <div class="company_name_form_block">
+                                <div class="title_company_name_form_block">
+                                    <h1>Description</h1>
+                                </div>
+                                <label>
+                                    <textarea name="company_description" cols="100"></textarea>
+                                </label>
+                            </div>
+
+                            <div class="contact_information_company_informations_block">
+                                <div class="company_name_form_block">
+                                    <div class="title_company_name_form_block">
+                                        <h1>Address Line 1</h1>
+                                        <span>*</span>
+                                    </div>
+                                    <label>
+                                        <input type="text" name="actual_address" autocomplete="off" placeholder="1/1, Abylaikhan Street" id="company_address" oninput="bass()">
+                                    </label>
+                                    <div class="error_message_form_block">
+                                        <p id="error_message_company_address">Actual Address is required</p>
+                                    </div>
+                                </div>
+                                <div class="company_name_form_block">
+                                    <div class="title_company_name_form_block">
+                                        <h1>Address Line 2</h1>
+                                    </div>
+                                    <label>
+                                        <input type="text" name="actual_address_second" autocomplete="off">
+                                    </label>
+                                </div>
+                                <div class="city_post_code_actual_address_company">
+                                    <div class="company_name_form_block city_actual_address_company">
+                                        <div class="title_company_name_form_block">
+                                            <h1>City</h1>
+                                            <span>*</span>
+                                        </div>
+                                        <label>
+                                            <input type="text" name="city_actual_address" autocomplete="off" placeholder="Almaty" id="company_city" oninput="bass()">
+                                        </label>
+                                        <div class="error_message_form_block">
+                                            <p id="error_message_company_city">City is required</p>
+                                        </div>
+                                    </div>
+                                    <div class="company_name_form_block post_code_actual_address_company">
+                                        <div class="title_company_name_form_block">
+                                            <h1>Post Code</h1>
+                                            <span>*</span>
+                                        </div>
+                                        <label>
+                                            <input type="text" name="post_code_actual_address" autocomplete="off" placeholder="040900" id="company_post_code" oninput="bass()">
+                                        </label>
+                                        <div class="error_message_form_block">
+                                            <p id="error_message_company_post_code">Post code is required</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="movement_between_categories_create_company">
+                                <div class="back_page_to_company_informations">
+                                    <div class="back_page_info" id="back_to_company_details">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#009ef7" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                                            </svg>
+                                        </span>
+                                        <h1>Back</h1>
+                                    </div>
+                                </div>
+                                <div class="continue_page_to_company_informations">
+                                    <div class="continue_page_info" id="continue_to_about_ceo">
+                                        <h1>Continue</h1>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form_block_company_ceo" id="form_block_company_ceo" style="display: none">
+                            <div class="movement_between_categories_create_company">
+                                <div class="back_page_to_company_informations">
+                                    <div class="back_page_info" id="back_to_company_information">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#009ef7" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                                            </svg>
+                                        </span>
+                                        <h1>Back</h1>
+                                    </div>
+                                </div>
+                                <div class="continue_page_to_company_informations">
+                                    <div class="continue_page_info" id="continue_to_completed">
+                                        <h1>Continue</h1>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form_block_form_completed" id="form_block_form_completed" style="display:none;">
+                            <div class="movement_between_categories_create_company">
+                                <div class="back_page_to_company_informations">
+                                    <div class="back_page_info" id="back_to_about_ceo">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#009ef7" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                                            </svg>
+                                        </span>
+                                        <h1>Back</h1>
+                                    </div>
+                                </div>
+                                <div class="continue_page_to_company_informations">
+                                    <div class="submit_completed_create_company" id="submit_completed">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function movementBlocks() {
+            const companyDetails = document.getElementById('form_block_company_details');
+            const companyInformation = document.getElementById('form_block_company_address_info');
+            const aboutCEO = document.getElementById('form_block_company_ceo');
+            const completedBlock = document.getElementById('form_block_form_completed');
+
+            let titleCompanyDetails = document.getElementById('company_details');
+            let titleCompanyInformation = document.getElementById('company_information');
+            let titleCompanyCEO = document.getElementById('company_ceo');
+            let titleCompanyCompleted = document.getElementById('form_completed');
+
+            document.getElementById('continue_to_company_information').addEventListener('click', () => {
+                companyDetails.style.display = 'none';
+                companyInformation.style.display = 'block';
+                titleCompanyDetails.style.color = '#FFF';
+                titleCompanyDetails.style.borderBottom = 'none';
+                titleCompanyInformation.style.color = '#009ef7';
+                titleCompanyInformation.style.borderBottom = '1px solid #009ef7';
+            })
+
+            document.getElementById('back_to_company_details').addEventListener('click', () => {
+                companyInformation.style.display = 'none';
+                companyDetails.style.display = 'block';
+                titleCompanyInformation.style.color = '#FFF';
+                titleCompanyInformation.style.borderBottom = 'none';
+                titleCompanyDetails.style.color = '#009ef7';
+                titleCompanyDetails.style.borderBottom = '1px solid #009ef7';
+            })
+
+            document.getElementById('continue_to_about_ceo').addEventListener('click', () => {
+                companyInformation.style.display = 'none';
+                aboutCEO.style.display = 'block';
+                titleCompanyInformation.style.color = '#FFF';
+                titleCompanyInformation.style.borderBottom = 'none';
+                titleCompanyCEO.style.color = '#009ef7';
+                titleCompanyCEO.style.borderBottom = '1px solid #009ef7';
+            })
+
+            document.getElementById('back_to_company_information').addEventListener('click', () => {
+                aboutCEO.style.display = 'none';
+                companyInformation.style.display = 'block';
+                titleCompanyCEO.style.color = '#FFF';
+                titleCompanyCEO.style.borderBottom = 'none';
+                titleCompanyInformation.style.color = '#009ef7';
+                titleCompanyInformation.style.borderBottom = '1px solid #009ef7';
+            })
+
+            document.getElementById('continue_to_completed').addEventListener('click', () => {
+                aboutCEO.style.display = 'none';
+                completedBlock.style.display = 'block';
+                titleCompanyCEO.style.color = '#FFF';
+                titleCompanyCEO.style.borderBottom = 'none';
+                titleCompanyCompleted.style.color = '#009ef7';
+                titleCompanyCompleted.style.borderBottom = '1px solid #009ef7';
+            })
+
+            document.getElementById('back_to_about_ceo').addEventListener('click', () => {
+                completedBlock.style.display = 'none';
+                aboutCEO.style.display = 'block';
+                titleCompanyCompleted.style.color = '#FFF';
+                titleCompanyCompleted.style.borderBottom = 'none';
+                titleCompanyCEO.style.color = '#009ef7';
+                titleCompanyCEO.style.borderBottom = '1px solid #009ef7';
+            })
+        }
+
+    </script>
 
 {% endblock %}
